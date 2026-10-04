@@ -4,11 +4,14 @@
 [![Architecture](https://img.shields.io/badge/architecture-Clean%20%2F%20Hexagonal-emerald.svg)]()
 [![Scheduler](https://img.shields.io/badge/scheduler-APScheduler%203.11-orange.svg)](https://github.com/agronholm/apscheduler)
 [![Report Generator](https://img.shields.io/badge/reports-ReportLab%20%2B%20Matplotlib-purple.svg)]()
+[![Execution Logs](https://img.shields.io/badge/execution%20proof-verified-success.svg)](EXECUTION_LOGS.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 
 > **Enterprise Python Automation Capstone Project**  
 > An autonomous, production-grade Python system integrating live backend REST market APIs, quantitative technical indicators (RSI, Moving Averages, Bollinger Bands), multi-channel real-time anomaly alerting, executive PDF report compilation with high-resolution financial charts, and automated cron/interval scheduling with disaster recovery backups.
+>
+> 📄 **Official Execution Proof**: See [EXECUTION_LOGS.md](EXECUTION_LOGS.md) for full terminal outputs, test runs, and CLI proof.
 
 ---
 
@@ -25,6 +28,7 @@
 10. [Database Persistence & Automated Backups](#-database-persistence--automated-backups)
 11. [Configuration Reference](#-configuration-reference)
 12. [Testing & Verification](#-testing--verification)
+13. [Official Execution Logs & Proof](EXECUTION_LOGS.md)
 
 ---
 
