@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketsentinel"
+version = "1.0.0"
+description = "Enterprise Market Intelligence, Automated Reporting, and Scheduling Engine"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Jateen Jadhav", email = "jatinxwolverine@users.noreply.github.com" }
+]
+urls = { "Homepage" = "https://github.com/jatinxwolverine/marketsentinel", "Repository" = "https://github.com/jatinxwolverine/marketsentinel.git" }
+keywords = [
+    "automation",
+    "financial",
+    "market-intelligence",
+    "crypto",
+    "pdf-reports",
+    "scheduler",
+    "cli",
+    "apscheduler",
+    "alerts"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0.0",
+    "reportlab>=4.0.0",
+    "matplotlib>=3.8.0",
+    "apscheduler>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+marketsentinel = "marketsentinel.cli.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["marketsentinel*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q -v"
+testpaths = ["tests"]
+pythonpath = ["src"]

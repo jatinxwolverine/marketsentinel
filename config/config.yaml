@@ -1,0 +1,70 @@
+# ==============================================================================
+# MarketSentinel - Enterprise Automation & Market Intelligence Configuration
+# ==============================================================================
+
+app_name: "MarketSentinel"
+environment: "production"
+currency: "usd"
+debug: false
+
+# Assets to monitor and evaluate
+symbols:
+  - "bitcoin"
+  - "ethereum"
+  - "solana"
+  - "cardano"
+  - "ripple"
+
+# API Integration Settings
+api:
+  provider: "coingecko"
+  timeout: 15
+  retry_attempts: 3
+  retry_backoff: 1.5
+  rate_limit_sleep: 1.0
+  base_url: "https://api.coingecko.com/api/v3"
+
+# Real-Time Alert Engine Configuration
+alerts:
+  enabled: true
+  console_enabled: true
+  webhook_enabled: false
+  webhook_url: ""
+  email_enabled: false
+  smtp_host: "smtp.example.com"
+  smtp_port: 587
+  smtp_user: "alert@example.com"
+  smtp_password: ""
+  recipient_email: "risk-desk@example.com"
+  price_change_threshold_pct: 3.5
+  rsi_oversold: 30.0
+  rsi_overbought: 70.0
+  volatility_spike_pct: 6.0
+
+# Database Persistence Configuration
+storage:
+  db_path: "data/marketsentinel.db"
+  enable_wal: true
+
+# Automated Backup & Retention Settings
+backup:
+  enabled: true
+  backup_dir: "backups"
+  retention_count: 5
+  compression: "gz"
+  cloud_sync_simulated: true
+
+# Executive PDF Report Generation Settings
+reporting:
+  output_dir: "reports"
+  company_name: "MarketSentinel Enterprise Capital"
+  title: "Daily Market Intelligence & Technical Risk Digest"
+  include_charts: true
+  theme: "executive_dark"
+
+# Autonomous Task Scheduler Settings
+scheduler:
+  ingestion_interval_seconds: 60
+  alert_interval_seconds: 60
+  daily_report_time: "18:00"
+  backup_interval_hours: 6

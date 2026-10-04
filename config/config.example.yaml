@@ -1,0 +1,54 @@
+# Example Configuration for MarketSentinel
+app_name: "MarketSentinel"
+environment: "production"
+currency: "usd"
+debug: false
+
+symbols:
+  - "bitcoin"
+  - "ethereum"
+  - "solana"
+  - "cardano"
+  - "ripple"
+
+api:
+  provider: "coingecko"
+  timeout: 15
+  retry_attempts: 3
+  retry_backoff: 1.5
+  rate_limit_sleep: 1.0
+
+alerts:
+  enabled: true
+  console_enabled: true
+  webhook_enabled: false
+  webhook_url: ""
+  email_enabled: false
+  price_change_threshold_pct: 4.0
+  rsi_oversold: 30.0
+  rsi_overbought: 70.0
+  volatility_spike_pct: 7.5
+
+storage:
+  db_path: "data/marketsentinel.db"
+  enable_wal: true
+
+backup:
+  enabled: true
+  backup_dir: "backups"
+  retention_count: 5
+  compression: "gz"
+  cloud_sync_simulated: true
+
+reporting:
+  output_dir: "reports"
+  company_name: "MarketSentinel Capital Corp"
+  title: "Executive Market Intelligence Report"
+  include_charts: true
+  theme: "executive_dark"
+
+scheduler:
+  ingestion_interval_seconds: 60
+  alert_interval_seconds: 60
+  daily_report_time: "18:00"
+  backup_interval_hours: 6
